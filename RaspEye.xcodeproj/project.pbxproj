@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820F867222D47DBE00B86A06 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820F867122D47DBE00B86A06 /* CameraViewController.swift */; };
+		820F867622D487D700B86A06 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820F867522D487D600B86A06 /* Camera.swift */; };
+		820F867822D4881F00B86A06 /* ZoomPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820F867722D4881F00B86A06 /* ZoomPan.swift */; };
+		820F867C22D489CC00B86A06 /* mysocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 820F867B22D489CC00B86A06 /* mysocket.c */; };
+		820F867E22D48C8C00B86A06 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820F867D22D48C8C00B86A06 /* Settings.swift */; };
+		820F868022D48F9600B86A06 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820F867F22D48F9600B86A06 /* StringExt.swift */; };
+		820F868222D48F9C00B86A06 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820F868122D48F9C00B86A06 /* Utils.swift */; };
+		820F868422D4AEF400B86A06 /* NetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820F868322D4AEF400B86A06 /* NetworkInterface.swift */; };
+		820F868622D4AFE500B86A06 /* IntTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820F868522D4AFE500B86A06 /* IntTextField.swift */; };
+		820F868822D4B07400B86A06 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820F868722D4B07400B86A06 /* Reachability.swift */; };
+		820F868A22D4B08000B86A06 /* NavigationControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820F868922D4B08000B86A06 /* NavigationControllerExt.swift */; };
 		823DB3F722D3669C00389C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823DB3F622D3669C00389C4A /* AppDelegate.swift */; };
 		823DB3F922D3669C00389C4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823DB3F822D3669C00389C4A /* ViewController.swift */; };
 		823DB3FC22D3669D00389C4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823DB3FA22D3669D00389C4A /* Main.storyboard */; };
@@ -15,6 +26,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		820F865522D3B57700B86A06 /* RaspEye-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RaspEye-Bridging-Header.h"; sourceTree = "<group>"; };
+		820F867022D3B6A000B86A06 /* RPiCameraViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RPiCameraViewer.entitlements; sourceTree = "<group>"; };
+		820F867122D47DBE00B86A06 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		820F867522D487D600B86A06 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		820F867722D4881F00B86A06 /* ZoomPan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomPan.swift; sourceTree = "<group>"; };
+		820F867A22D489CC00B86A06 /* mysocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mysocket.h; sourceTree = "<group>"; };
+		820F867B22D489CC00B86A06 /* mysocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mysocket.c; sourceTree = "<group>"; };
+		820F867D22D48C8C00B86A06 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		820F867F22D48F9600B86A06 /* StringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		820F868122D48F9C00B86A06 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		820F868322D4AEF400B86A06 /* NetworkInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkInterface.swift; sourceTree = "<group>"; };
+		820F868522D4AFE500B86A06 /* IntTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntTextField.swift; sourceTree = "<group>"; };
+		820F868722D4B07400B86A06 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		820F868922D4B08000B86A06 /* NavigationControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerExt.swift; sourceTree = "<group>"; };
 		823DB3F322D3669C00389C4A /* RaspEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaspEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		823DB3F622D3669C00389C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		823DB3F822D3669C00389C4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +60,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		820F867422D487C700B86A06 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				820F867F22D48F9600B86A06 /* StringExt.swift */,
+				820F868122D48F9C00B86A06 /* Utils.swift */,
+				820F867522D487D600B86A06 /* Camera.swift */,
+				820F868322D4AEF400B86A06 /* NetworkInterface.swift */,
+				820F867722D4881F00B86A06 /* ZoomPan.swift */,
+				820F867D22D48C8C00B86A06 /* Settings.swift */,
+				820F868922D4B08000B86A06 /* NavigationControllerExt.swift */,
+				820F868722D4B07400B86A06 /* Reachability.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		820F867922D4895F00B86A06 /* Sockets */ = {
+			isa = PBXGroup;
+			children = (
+				820F867B22D489CC00B86A06 /* mysocket.c */,
+				820F867A22D489CC00B86A06 /* mysocket.h */,
+			);
+			name = Sockets;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		823DB3EA22D3669C00389C4A = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +105,17 @@
 			isa = PBXGroup;
 			children = (
 				823DB3F622D3669C00389C4A /* AppDelegate.swift */,
+				820F867122D47DBE00B86A06 /* CameraViewController.swift */,
 				823DB3F822D3669C00389C4A /* ViewController.swift */,
+				820F868522D4AFE500B86A06 /* IntTextField.swift */,
+				820F867922D4895F00B86A06 /* Sockets */,
+				820F867422D487C700B86A06 /* Classes */,
 				823DB3FA22D3669D00389C4A /* Main.storyboard */,
 				823DB3FD22D3669D00389C4A /* Assets.xcassets */,
 				823DB3FF22D3669D00389C4A /* LaunchScreen.storyboard */,
 				823DB40222D3669D00389C4A /* Info.plist */,
+				820F865522D3B57700B86A06 /* RaspEye-Bridging-Header.h */,
+				820F867022D3B6A000B86A06 /* RPiCameraViewer.entitlements */,
 			);
 			path = RaspEye;
 			sourceTree = "<group>";
@@ -96,6 +152,7 @@
 				TargetAttributes = {
 					823DB3F222D3669C00389C4A = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -136,6 +193,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				823DB3F922D3669C00389C4A /* ViewController.swift in Sources */,
+				820F867622D487D700B86A06 /* Camera.swift in Sources */,
+				820F868822D4B07400B86A06 /* Reachability.swift in Sources */,
+				820F868222D48F9C00B86A06 /* Utils.swift in Sources */,
+				820F868022D48F9600B86A06 /* StringExt.swift in Sources */,
+				820F867222D47DBE00B86A06 /* CameraViewController.swift in Sources */,
+				820F868622D4AFE500B86A06 /* IntTextField.swift in Sources */,
+				820F867822D4881F00B86A06 /* ZoomPan.swift in Sources */,
+				820F867E22D48C8C00B86A06 /* Settings.swift in Sources */,
+				820F868A22D4B08000B86A06 /* NavigationControllerExt.swift in Sources */,
+				820F867C22D489CC00B86A06 /* mysocket.c in Sources */,
+				820F868422D4AEF400B86A06 /* NetworkInterface.swift in Sources */,
 				823DB3F722D3669C00389C4A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,15 +350,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93BMXJR4C7;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KMT33RPUAV;
 				INFOPLIST_FILE = RaspEye/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.egecavusoglu.RaspEye;
+				PRODUCT_BUNDLE_IDENTIFIER = tr.com.twin.raspeye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "RaspEye Development";
+				SWIFT_OBJC_BRIDGING_HEADER = "RaspEye/RaspEye-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,15 +372,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93BMXJR4C7;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KMT33RPUAV;
 				INFOPLIST_FILE = RaspEye/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.egecavusoglu.RaspEye;
+				PRODUCT_BUNDLE_IDENTIFIER = tr.com.twin.raspeye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "RaspEye Development";
+				SWIFT_OBJC_BRIDGING_HEADER = "RaspEye/RaspEye-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
