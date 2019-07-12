@@ -10,10 +10,10 @@
   <ul>
     <li> <code>-rot</code> for the rotation of the video stream. (Some useful parameters are 90, 180, or 270)</li>
     <li> <code>-w</code> and <code>-h</code> are for the width and the height of the stream.</li>
-    <li> <code>-fps</code> for Frames per Second parameter (usually 15 or 30 is a good fit)</li>
+    <li> <code>-fps</code> for Frames per Second parameter (usually 15 or 30 is a good fit).</li>
     <li> <code>-b</code> for the Bits per Second transmission rate. (1,000,000 is a suitable value)</li>
-    <li> <code>-nc</code> command is used for the netcat software
-    <li> <code>5000</code> at the end specifies the port value.</li>
+    <li> <code>-nc</code> command is used for the netcat software.</li>
+    <li> <code>5000</code> at the end specifies the port number.</li>
     </ul>
 </p>
 </li>
