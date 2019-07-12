@@ -56,11 +56,6 @@ class CameraViewController: UIViewController {
     }
     
     func start() {
-        print("'start' running")
-        // set the status label
-//        statusLabel.text = "initializingVideo".local
-//        statusLabel.textColor = Utils.goodTextColor
-//        statusLabel.isHidden = false
         imageView.image = nil
         
         // start reading the stream and decoding the video
@@ -76,7 +71,6 @@ class CameraViewController: UIViewController {
     
     
     func createReadThread() -> Bool{
-        print("createReadThread running")
         if camera == nil
         {
             statusError("errorNoCamera".local)
