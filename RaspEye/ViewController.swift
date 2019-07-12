@@ -44,43 +44,42 @@ class ViewController: UIViewController {
     
     @IBAction func launchButton(_ sender: Any) {
         // Camera must be instanstiated and started here
-       
-//
-//        guard let address = addressText.text, address.length > 0 else
-//        {
-//            Utils.error(self, "errorNoAddress")
-//            return false
-//        }
-//        guard Utils.isIpAddress(address) || Utils.isHostname(address) else
-//        {
-//            Utils.error(self, "errorBadAddress")
-//            return false
-//        }
-//        guard let port = Utils.getIntTextField(self, portIntField, "port")
-//            else
-//        {
-//            return false
-//        }
+        var allValidInput: Bool = true
+        let alert = UIAlertController(title: "Input Validation Error", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        
+        guard let address = addressText.text, address.length > 0 else {
+            allValidInput = false
+            alert.message = "No IP Address was entered."
+            self.present(alert, animated: true)
+            return
+        }
+        guard Utils.isIpAddress(address) || Utils.isHostname(address) else {
+            allValidInput = false
+            alert.message = "IP Address is not valid"
+            self.present(alert, animated: true)
+            return
+        }
+        guard let port = Int(portText.text!) else {
+            allValidInput = false
+            alert.message = "Port address is not valid"
+            self.present(alert, animated: true)
+            return
+        }
         
         // assign the new values to the camera
         camera.name = "cameraName"
         //camera.network = networkLabel.text!
-        camera.address = addressText.text!
-        camera.port = Int(portText.text!)!
+        camera.address = address
+        camera.port = port
         
-        
-       
-        
-        // Segue is performed
+        // Segue is performed if specified input parameters are sanitized. (IP Address and Port)
+        if allValidInput {
         performSegue(withIdentifier: "goToCamera", sender: Any?.self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    if segue.identifier == "goToCamera" {
-//        guard let vc = segue.destination as? CameraViewController else {return}
-//         let camera = sender as? Camera 
-//        vc.camera = Camera(camera)
-//        }
         if let vc = segue.destination as? CameraViewController, segue.identifier == "goToCamera" {
              vc.camera = camera
         }

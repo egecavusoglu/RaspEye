@@ -20,6 +20,7 @@ class CameraViewController: UIViewController {
     let FADE_OUT_INTERVAL = 1.0
     let FADE_IN_INTERVAL = 0.1
 
+    @IBOutlet weak var errorTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBAction func closeButtonPressed(_ sender: Any) {
         self.dismiss(animated: true) {
@@ -47,7 +48,7 @@ class CameraViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        print(camera?.address)
+        
         zoomPan = ZoomPan(imageView)
         UIApplication.shared.isIdleTimerDisabled = true
         app.videoViewController = self
