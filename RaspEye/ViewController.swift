@@ -15,9 +15,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var inputContainer: UIView!
     @IBOutlet weak var settingsLabel: UILabel!
     
-    
-    
-    
     @IBOutlet weak var addressText: UITextField!
     @IBOutlet weak var portText: UITextField!
     @IBOutlet weak var widthText: UITextField!
@@ -37,8 +34,7 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
-    @objc func keyboardDisappear(){
-        
+    @objc func keyboardDisappear() {
         view.endEditing(true)
     }
     
@@ -48,6 +44,7 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "Input Validation Error", message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         
+        // Sanitizing input before assigning it to the "camera"
         guard let address = addressText.text, address.length > 0 else {
             allValidInput = false
             alert.message = "No IP Address was entered."
@@ -67,9 +64,8 @@ class ViewController: UIViewController {
             return
         }
         
-        // assign the new values to the camera
+        // Assigning the user input parameters to the Camera object.
         camera.name = "cameraName"
-        //camera.network = networkLabel.text!
         camera.address = address
         camera.port = port
         
@@ -79,63 +75,41 @@ class ViewController: UIViewController {
         }
     }
     
+    // This method is used to transfer data to the CameraViewController. The "camera" object is moved through the segue.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? CameraViewController, segue.identifier == "goToCamera" {
+            if let vc = segue.destination as? CameraViewController, segue.identifier == "goToCamera" {
              vc.camera = camera
         }
    
     }
     
     
-    
-    func screenLayout () {
-//        view.addConstraints("V:|-30-[v0(100)][v1]-100-|", views: titleCont, featuresContainer)
-//        view.addConstraints("V:|-30-[v0(100)][v1]-100-|", views: titleCont, inputContainer)
-//        view.addConstraints("H:|[v0][v1(==v0)]|", views: featuresContainer, inputContainer)
-//        view.addConstraints("H:|[v0]|", views: titleCont)
-        titleCont.translatesAutoresizingMaskIntoConstraints = false
-        titleCont.topAnchor.constraint(equalTo: view.topAnchor, constant: 30).isActive = true
-        titleCont.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        titleCont.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        titleCont.heightAnchor.constraint(equalToConstant: 100).isActive = true
+    // Auto layout using code.
+       func screenLayout () {
+            titleCont.translatesAutoresizingMaskIntoConstraints = false
+            titleCont.topAnchor.constraint(equalTo: view.topAnchor, constant: 30).isActive = true
+            titleCont.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+            titleCont.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+            titleCont.heightAnchor.constraint(equalToConstant: 100).isActive = true
 
-        settingsLabel.textAlignment = .center
-        settingsLabel.translatesAutoresizingMaskIntoConstraints = false
-        settingsLabel.topAnchor.constraint(equalTo: titleCont.topAnchor).isActive = true
-        settingsLabel.bottomAnchor.constraint(equalTo: titleCont.bottomAnchor).isActive = true
-        settingsLabel.leadingAnchor.constraint(equalTo: titleCont.leadingAnchor).isActive = true
-        settingsLabel.trailingAnchor.constraint(equalTo: titleCont.trailingAnchor).isActive = true
+            settingsLabel.textAlignment = .center
+            settingsLabel.translatesAutoresizingMaskIntoConstraints = false
+            settingsLabel.topAnchor.constraint(equalTo: titleCont.topAnchor).isActive = true
+            settingsLabel.bottomAnchor.constraint(equalTo: titleCont.bottomAnchor).isActive = true
+            settingsLabel.leadingAnchor.constraint(equalTo: titleCont.leadingAnchor).isActive = true
+            settingsLabel.trailingAnchor.constraint(equalTo: titleCont.trailingAnchor).isActive = true
 
-        featuresContainer.translatesAutoresizingMaskIntoConstraints = false
-        featuresContainer.topAnchor.constraint(equalTo: titleCont.bottomAnchor).isActive = true
-        featuresContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        featuresContainer.trailingAnchor.constraint(equalTo: inputContainer.leadingAnchor).isActive = true
-        featuresContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100).isActive = true
+            featuresContainer.translatesAutoresizingMaskIntoConstraints = false
+            featuresContainer.topAnchor.constraint(equalTo: titleCont.bottomAnchor).isActive = true
+            featuresContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+            featuresContainer.trailingAnchor.constraint(equalTo: inputContainer.leadingAnchor).isActive = true
+            featuresContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100).isActive = true
 
-        inputContainer.translatesAutoresizingMaskIntoConstraints = false
-        inputContainer.topAnchor.constraint(equalTo: titleCont.bottomAnchor).isActive = true
-        inputContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        inputContainer.widthAnchor.constraint(equalTo: featuresContainer.widthAnchor, multiplier: 1).isActive = true
-        inputContainer.heightAnchor.constraint(equalTo: featuresContainer.heightAnchor).isActive = true
-        
-    }
+            inputContainer.translatesAutoresizingMaskIntoConstraints = false
+            inputContainer.topAnchor.constraint(equalTo: titleCont.bottomAnchor).isActive = true
+            inputContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+            inputContainer.widthAnchor.constraint(equalTo: featuresContainer.widthAnchor, multiplier: 1).isActive = true
+            inputContainer.heightAnchor.constraint(equalTo: featuresContainer.heightAnchor).isActive = true
+            
+        }
 }
-
-//extension UIView {
-//    /// Add constraints with visual format
-//    ///
-//    /// - Parameters:
-//    ///   - format: Visual format just change the view names with v0,v1,v2...
-//    ///   - views: Views for the constraints
-//    /// - Example:
-//    /// ``` self.view.addConstraints(_ format: "V:|-20-[v0]-20-|", views:contentView) ```
-//    func addConstraints(_ format: String, views: UIView...) {
-//        var viewsDictionary = [String: UIView]()
-//        for (index, view) in views.enumerated() {
-//            let key = "v\(index)"
-//            viewsDictionary[key] = view
-//            view.translatesAutoresizingMaskIntoConstraints = false
-//        }
-//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: viewsDictionary))
-//    }
-//}

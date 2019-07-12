@@ -47,8 +47,6 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
         zoomPan = ZoomPan(imageView)
         UIApplication.shared.isIdleTimerDisabled = true
         app.videoViewController = self
